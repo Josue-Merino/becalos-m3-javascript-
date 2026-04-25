@@ -21,8 +21,8 @@ A continuación se detallan los módulos que se irán subiendo progresivamente:
 | **01. Introducción a JavaScript** | Fundamentos, variables y tipos de datos. | Hecho |
 | **02. Comparaciones y Decisiones** | Lógica condicional y operadores. | Hecho |
 | **03. Arreglos y Ciclos** | Estructuras de datos lineales y bucles. | Hecho |
-| **04. Funciones en JavaScript** | Reutilización de código y lógica modular. | ⏳ |
-| **05. Objetos en JavaScript** | Programación orientada a objetos básica y estructuras. | ⏳ |
+| **04. Funciones en JavaScript** | Reutilización de código y lógica modular. | Hecho |
+| **05. Objetos en JavaScript** | Estructura de Objetos y métodos | Hecho |
 | **06. Intro al DOM** | Interacción entre JS y el documento HTML. | ⏳ |
 | **07. Generador de Passwords** | Proyecto práctico de lógica de seguridad. | ⏳ |
 | **08. App de Comentarios** | Aplicación completa con manejo de eventos y DOM. | ⏳ |
