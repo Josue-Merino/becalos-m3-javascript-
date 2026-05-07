@@ -1,0 +1,246 @@
+:root{
+
+    --bg-color: #F8FAFC;
+    --white: #FFFFFF;
+    --dark:#000;
+    --primary: #4F46E5;
+    --gray: #777777;
+    --light-gray: #a7a5a5;
+
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* ----------------- CSS RESET ----------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    /* 1REM === 10PX */
+    font-size: 62.5%; 
+}
+
+/* ----------------- GLOBALS ----------------- */
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--font);
+    background-color: var(--bg-color);
+}
+
+
+
+/* ----------------- HEADER ----------------- */
+
+.heading {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 4rem;
+}
+
+.decription{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.4;
+    color: var(--gray);
+}
+
+/* TABLET */
+
+@media (min-width: 768px){ 
+    .heading {
+        font-size: 4.5rem;
+    }
+
+    .decription{
+        font-size: 1.8rem;
+    }   
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px){ 
+    .heading {
+        font-size: 4.8rem;
+    }
+
+    .decription{
+        font-size: 2rem;
+    }   
+}
+
+
+/* ----------------- MAIN ----------------- */
+main {
+    margin-top: 5rem;
+}
+.container {
+    max-width: 60rem;
+    background-color: var(--white);
+    margin: 0 1rem ;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #d3d3d3;
+    box-shadow: 4px 4px 4px -3px rgba(107, 107, 107, 0.28);
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form__label{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.form__textarea{
+    padding: 1rem 2rem;
+    border: 1px solid #d3d3d3;
+    border-radius: 1rem;
+    resize: none;
+    height: calc(1.5rem * 1.5 * 10);
+}
+
+.form__textarea::placeholder {
+    color: var(--light-gray);
+}
+
+.form__textarea:focus {
+    border: 1px solid var(--primary);
+    outline: 1px solid var(--primary);
+}
+
+
+.form__btn {
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    opacity: .7;
+    transition: background .25s ease-in-out;
+}
+
+.form__btn:hover {
+    background-color: #322d91;
+}
+/* TABLET */
+
+@media (min-width: 768px){ 
+    .container {
+        margin: 0 auto;
+    }
+
+    .form__label {
+        font-size: 1.7rem;
+    }
+
+    .form__btn {
+        padding: 1.2rem 2.2rem;
+        font-size: 1.6rem;
+    }
+
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px){ 
+    .form__label {
+        font-size: 2rem;
+    }
+
+}
+
+
+
+/* ----------------- COMMENTS ----------------- */
+
+.message__container {
+    max-width: 60rem;
+    background-color: var(--white);
+    margin: 3rem 1rem ;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #d3d3d3;
+    box-shadow: 4px 4px 4px -3px rgba(107, 107, 107, 0.28);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.message{
+    border: 1px solid var(--primary);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+}
+
+.message__text {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.container__date {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message_date {
+    font-size: 1.4rem;
+    color: #777777;
+}
+
+.btn__message {
+    background-color: rgb(223, 55, 55);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    transition: opacity .25s ease-in-out;
+}
+
+.btn__message:hover {
+    opacity: .7;
+}
+
+@media (min-width: 768px){ 
+    .message__container {
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .btn__message {
+        padding: 1.2rem 2.2rem;
+        font-size: 1.6rem;
+    }
+
+}
+
+
+
+/* ----------------- ALERTA ----------------- */
+
+.alerta {
+    text-align: center;
+    background-color: rgb(223, 55, 55);
+    border-radius: 1rem;
+    color: var(--white);
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
