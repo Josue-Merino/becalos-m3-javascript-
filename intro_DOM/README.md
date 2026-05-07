@@ -12,3 +12,7 @@ Ejercicio: Crear una caja de comentarios donde los usuarios puedan escribir y ag
 ### Solución 
 
 La solución a este desafio se encuentra en el archivo app.js,index.html y styles.css donde se implementó el maquetado de la página, los estilos y finalmente la lógica para poder agregar comentarios y persistan gracias a local storage.
+
+### DEMO
+
+[Prueba el proyecto](https://simple-comment-box.netlify.app/)
