@@ -1,0 +1,274 @@
+:root {
+    --dark-grey: #24232C;
+    --grey: #817D92;
+    --almost-white: #E6E5EA;
+    --very-dark-grey: #18171F;
+    --neon-green: #A4FFAF;
+    --red: #F64A4A;
+    --orange: #FB7C58;
+    --yellow: #F8CD65;
+
+    --font: 'JetBrains Mono', monospace;
+}
+
+/* ----------------- CSS RESET ----------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* 1REM === 10PX */
+    font-size: 62.5%; 
+}
+
+/* ----------------- GLOBALS ----------------- */
+body {
+    font-size: 1.6rem;
+    font-family: var(--font);
+    background-color: var(--very-dark-grey);
+    color: var(--almost-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem; 
+}
+
+/* ----------------- LAYOUT ----------------- */
+.app-container {
+    width: 100%;
+    max-width: 54rem;
+}
+
+.app-title {
+    color: var(--grey);
+    text-align: center;
+    font-size: 1.8rem; 
+    margin-bottom: 2.5rem;
+}
+
+/* ----------------- RESULT SECTION ----------------- */
+.result-container {
+    background-color: var(--dark-grey);
+    padding: 1.6rem; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#password-display {
+    font-size: 2.4rem; 
+    word-break: break-all; /
+}
+
+.placeholder { 
+    opacity: 0.25; 
+}
+
+#copy-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* ----------------- SETTINGS FORM ----------------- */
+.settings-container {
+    background-color: var(--dark-grey);
+    padding: 1.6rem; 
+}
+
+.length-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.length-number {
+    color: var(--neon-green);
+    font-size: 2.8rem; 
+}
+
+/* CUSTOM SLIDER */
+.slider {
+    width: 100%;
+    height: 0.8rem;
+    background: var(--very-dark-grey);
+    outline: none;
+    appearance: none;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: var(--almost-white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ----------------- OPTIONS (CHECKBOXES) ----------------- */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 3.5rem;
+    cursor: pointer;
+    font-size: 1.6rem; /* Base móvil */
+    user-select: none;
+}
+
+.checkbox-container input { 
+    display: none; 
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--almost-white);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--neon-green);
+    border-color: var(--neon-green);
+}
+
+.checkmark:after {
+    content: "✔";
+    position: absolute;
+    display: none;
+    color: var(--very-dark-grey);
+    font-size: 1.4rem;
+    left: 0.3rem;
+    top: -0.1rem;
+}
+
+.checkbox-container input:checked ~ .checkmark:after { 
+    display: block; 
+}
+
+/* ----------------- STRENGTH METER ----------------- */
+.strength-meter {
+    background-color: var(--very-dark-grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.strength-text { 
+    color: var(--grey); 
+    font-weight: bold; 
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.strength-visual {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bars { 
+    display: flex; 
+    gap: 0.6rem; 
+}
+
+.bar {
+    width: 0.8rem;
+    height: 2.4rem;
+    border: 0.2rem solid var(--almost-white);
+}
+
+.bar.active {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+/* ----------------- GENERATE BUTTON ----------------- */
+.generate-btn {
+    width: 100%;
+    background-color: var(--neon-green);
+    color: var(--very-dark-grey);
+    border: 0.2rem solid transparent;
+    padding: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* ----------------- MEDIA QUERIES (DESKTOP / TABLET) ----------------- */
+
+@media (min-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+
+    .app-title {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+    }
+
+    .result-container, 
+    .settings-container {
+        padding: 2.4rem 3.2rem;
+    }
+
+    #password-display {
+        font-size: 3.2rem;
+    }
+
+    .length-number {
+        font-size: 3.2rem;
+    }
+
+    .checkbox-container {
+        font-size: 1.8rem;
+    }
+
+    .generate-btn {
+        padding: 2rem;
+        font-size: 1.8rem;
+    }
+
+    /* Hovers */
+    #copy-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .slider::-webkit-slider-thumb:hover {
+        background: var(--very-dark-grey);
+        border: 0.2rem solid var(--neon-green);
+    }
+
+    .generate-btn:hover {
+        background-color: transparent;
+        color: var(--neon-green);
+        border-color: var(--neon-green);
+    }
+
+    .generate-btn:hover svg path { 
+        fill: var(--neon-green); 
+    }
+}

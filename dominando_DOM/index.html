@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <h1 class="app-title">Password Generator</h1>
+
+        <div class="result-container">
+            <span id="password-display" class="placeholder">P4$5W0rD!</span>
+            <button id="copy-btn" title="Copiar">
+                <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.341 3.047 17.953.659A2.402 2.402 0 0 0 16.254 0H2.4A2.391 2.391 0 0 0 0 2.391v15.362A2.391 2.391 0 0 0 2.4 20.145h1.2v3.623A2.391 2.391 0 0 0 6 26.159h12.6c1.325 0 2.4-1.075 2.4-2.391V7.15c0-.638-.253-1.25-.706-1.703l-1.353-1.353V3.047Zm-1.2 20.721H6V5.942h11.103l2.038 2.038V23.768ZM3.6 17.754H2.4V2.391h11.4v1.2H6a2.391 2.391 0 0 0-2.4 2.391v11.772Z" fill="#A4FFAF"/></svg>
+            </button>
+        </div>
+
+        <div class="settings-container">
+            <div class="length-header">
+                <span>Character Length</span>
+                <span id="length-value" class="length-number">10</span>
+            </div>
+            <input type="range" id="length-slider" min="0" max="20" value="10" class="slider">
+
+            <div class="options">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="uppercase" checked>
+                    <span class="checkmark"></span>
+                    Include Uppercase Letters
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span class="checkmark"></span>
+                    Include Lowercase Letters
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="numbers" checked>
+                    <span class="checkmark"></span>
+                    Include Numbers
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="symbols">
+                    <span class="checkmark"></span>
+                    Include Symbols
+                </label>
+            </div>
+
+            <div class="strength-meter">
+                <span class="strength-text">STRENGTH</span>
+                <div class="strength-visual">
+                    <span id="strength-label">MEDIUM</span>
+                    <div class="bars" id="strength-bars">
+                        <div class="bar active"></div>
+                        <div class="bar active"></div>
+                        <div class="bar active"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="generate-btn" class="generate-btn">
+                GENERATE 
+                <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#24232C" d="m5.106 12 5.66-5.66a.5.5 0 0 0 0-.707L5.106 0 4.399.707 9.465 5.773H0v1h9.465l-5.066 5.067.707.707Z"/></svg>
+            </button>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
